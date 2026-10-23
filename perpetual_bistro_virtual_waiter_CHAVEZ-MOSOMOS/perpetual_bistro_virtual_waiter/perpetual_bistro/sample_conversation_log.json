@@ -1,0 +1,784 @@
+{
+  "table_no": 1,
+  "session_id": 1,
+  "events": [
+    {
+      "time": "2026-10-15T23:26:27",
+      "state": "STATE_GREETING",
+      "event": "session_reset"
+    },
+    {
+      "time": "2026-10-15T23:26:29",
+      "state": "STATE_GREETING",
+      "event": "user_message",
+      "text": "1"
+    },
+    {
+      "time": "2026-10-15T23:26:29",
+      "state": "STATE_GREETING",
+      "event": "state_transition",
+      "from_state": "STATE_GREETING",
+      "to_state": "STATE_TAKING_ORDER",
+      "reason": "table 1 captured"
+    },
+    {
+      "time": "2026-10-15T23:26:34",
+      "state": "STATE_TAKING_ORDER",
+      "event": "user_message",
+      "text": "can i see the menu"
+    },
+    {
+      "time": "2026-10-15T23:26:34",
+      "state": "STATE_TAKING_ORDER",
+      "event": "tool_call",
+      "tool": "get_menu_by_category",
+      "arguments": {
+        "category": "all"
+      },
+      "result": {
+        "ok": true,
+        "categories": [
+          "Combos",
+          "Mains",
+          "Pasta",
+          "Sides",
+          "Drinks",
+          "Desserts"
+        ],
+        "items": [
+          {
+            "id": 1,
+            "name": "Cheeseburger",
+            "category": "Mains",
+            "price": 180.0,
+            "stock_qty": 20,
+            "allergens": "dairy,egg,gluten",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 20,
+            "available": true,
+            "included": [
+              "Cheeseburger"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 2,
+            "name": "Chicken Inasal",
+            "category": "Mains",
+            "price": 210.0,
+            "stock_qty": 15,
+            "allergens": "soy",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 15,
+            "available": true,
+            "included": [
+              "Chicken Inasal"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 3,
+            "name": "Veggie Burger",
+            "category": "Mains",
+            "price": 170.0,
+            "stock_qty": 12,
+            "allergens": "gluten,soy",
+            "is_combo": false,
+            "dietary_tags": [
+              "vegetarian"
+            ],
+            "available_qty": 12,
+            "available": true,
+            "included": [
+              "Veggie Burger"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 4,
+            "name": "Grilled Salmon",
+            "category": "Mains",
+            "price": 320.0,
+            "stock_qty": 2,
+            "allergens": "fish",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 2,
+            "available": true,
+            "included": [
+              "Grilled Salmon"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 5,
+            "name": "Spaghetti Bolognese",
+            "category": "Pasta",
+            "price": 220.0,
+            "stock_qty": 18,
+            "allergens": "egg,gluten",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 18,
+            "available": true,
+            "included": [
+              "Spaghetti Bolognese"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 6,
+            "name": "Pesto Penne",
+            "category": "Pasta",
+            "price": 200.0,
+            "stock_qty": 10,
+            "allergens": "dairy,gluten,nuts",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 10,
+            "available": true,
+            "included": [
+              "Pesto Penne"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 7,
+            "name": "Mac and Cheese",
+            "category": "Pasta",
+            "price": 190.0,
+            "stock_qty": 14,
+            "allergens": "dairy,gluten",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 14,
+            "available": true,
+            "included": [
+              "Mac and Cheese"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 8,
+            "name": "French Fries",
+            "category": "Sides",
+            "price": 90.0,
+            "stock_qty": 30,
+            "allergens": "none listed",
+            "is_combo": false,
+            "dietary_tags": [
+              "vegetarian"
+            ],
+            "available_qty": 30,
+            "available": true,
+            "included": [
+              "French Fries"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 9,
+            "name": "Garden Salad",
+            "category": "Sides",
+            "price": 110.0,
+            "stock_qty": 16,
+            "allergens": "none listed",
+            "is_combo": false,
+            "dietary_tags": [
+              "vegetarian"
+            ],
+            "available_qty": 16,
+            "available": true,
+            "included": [
+              "Garden Salad"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 10,
+            "name": "Iced Tea",
+            "category": "Drinks",
+            "price": 50.0,
+            "stock_qty": 40,
+            "allergens": "none listed",
+            "is_combo": false,
+            "dietary_tags": [
+              "vegetarian"
+            ],
+            "available_qty": 40,
+            "available": true,
+            "included": [
+              "Iced Tea"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 11,
+            "name": "Mango Smoothie",
+            "category": "Drinks",
+            "price": 90.0,
+            "stock_qty": 20,
+            "allergens": "dairy",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 20,
+            "available": true,
+            "included": [
+              "Mango Smoothie"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 12,
+            "name": "Bottled Water",
+            "category": "Drinks",
+            "price": 30.0,
+            "stock_qty": 50,
+            "allergens": "none listed",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 50,
+            "available": true,
+            "included": [
+              "Bottled Water"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 13,
+            "name": "Chocolate Cake",
+            "category": "Desserts",
+            "price": 130.0,
+            "stock_qty": 8,
+            "allergens": "dairy,egg,gluten",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 8,
+            "available": true,
+            "included": [
+              "Chocolate Cake"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 14,
+            "name": "Halo-Halo",
+            "category": "Desserts",
+            "price": 120.0,
+            "stock_qty": 10,
+            "allergens": "dairy",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 10,
+            "available": true,
+            "included": [
+              "Halo-Halo"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 101,
+            "name": "Bistro Burger Meal",
+            "category": "Combos",
+            "price": 290.0,
+            "stock_qty": 0,
+            "allergens": "dairy,egg,gluten",
+            "is_combo": true,
+            "dietary_tags": [],
+            "available_qty": 20,
+            "available": true,
+            "included": [
+              "Cheeseburger",
+              "French Fries",
+              "Iced Tea"
+            ],
+            "savings": 30.0
+          },
+          {
+            "id": 102,
+            "name": "Chicken Inasal Meal",
+            "category": "Combos",
+            "price": 320.0,
+            "stock_qty": 0,
+            "allergens": "soy",
+            "is_combo": true,
+            "dietary_tags": [],
+            "available_qty": 15,
+            "available": true,
+            "included": [
+              "Chicken Inasal",
+              "French Fries",
+              "Iced Tea"
+            ],
+            "savings": 30.0
+          },
+          {
+            "id": 103,
+            "name": "Veggie Burger Meal",
+            "category": "Combos",
+            "price": 260.0,
+            "stock_qty": 0,
+            "allergens": "gluten,soy",
+            "is_combo": true,
+            "dietary_tags": [
+              "vegetarian"
+            ],
+            "available_qty": 12,
+            "available": true,
+            "included": [
+              "Veggie Burger",
+              "French Fries",
+              "Iced Tea"
+            ],
+            "savings": 50.0
+          },
+          {
+            "id": 104,
+            "name": "Grilled Salmon Meal",
+            "category": "Combos",
+            "price": 390.0,
+            "stock_qty": 0,
+            "allergens": "fish",
+            "is_combo": true,
+            "dietary_tags": [],
+            "available_qty": 2,
+            "available": true,
+            "included": [
+              "Grilled Salmon",
+              "French Fries",
+              "Iced Tea"
+            ],
+            "savings": 70.0
+          }
+        ]
+      }
+    },
+    {
+      "time": "2026-10-15T23:26:34",
+      "state": "STATE_TAKING_ORDER",
+      "event": "db_state",
+      "order": {
+        "items": [],
+        "subtotal": 0,
+        "service_fee": 0.0,
+        "total": 0.0,
+        "currency": "PHP"
+      }
+    },
+    {
+      "time": "2026-10-15T23:26:51",
+      "state": "STATE_TAKING_ORDER",
+      "event": "user_message",
+      "text": "can i see the foods without gluten?"
+    },
+    {
+      "time": "2026-10-15T23:26:51",
+      "state": "STATE_TAKING_ORDER",
+      "event": "tool_call",
+      "tool": "get_menu_by_dietary_filter",
+      "arguments": {
+        "diet": "allergen-free:gluten"
+      },
+      "result": {
+        "ok": true,
+        "diet": "allergen-free:gluten",
+        "allergen": "gluten",
+        "items": [
+          {
+            "id": 2,
+            "name": "Chicken Inasal",
+            "category": "Mains",
+            "price": 210.0,
+            "stock_qty": 15,
+            "allergens": "soy",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 15,
+            "available": true,
+            "included": [
+              "Chicken Inasal"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 4,
+            "name": "Grilled Salmon",
+            "category": "Mains",
+            "price": 320.0,
+            "stock_qty": 2,
+            "allergens": "fish",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 2,
+            "available": true,
+            "included": [
+              "Grilled Salmon"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 8,
+            "name": "French Fries",
+            "category": "Sides",
+            "price": 90.0,
+            "stock_qty": 30,
+            "allergens": "none listed",
+            "is_combo": false,
+            "dietary_tags": [
+              "vegetarian"
+            ],
+            "available_qty": 30,
+            "available": true,
+            "included": [
+              "French Fries"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 9,
+            "name": "Garden Salad",
+            "category": "Sides",
+            "price": 110.0,
+            "stock_qty": 16,
+            "allergens": "none listed",
+            "is_combo": false,
+            "dietary_tags": [
+              "vegetarian"
+            ],
+            "available_qty": 16,
+            "available": true,
+            "included": [
+              "Garden Salad"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 10,
+            "name": "Iced Tea",
+            "category": "Drinks",
+            "price": 50.0,
+            "stock_qty": 40,
+            "allergens": "none listed",
+            "is_combo": false,
+            "dietary_tags": [
+              "vegetarian"
+            ],
+            "available_qty": 40,
+            "available": true,
+            "included": [
+              "Iced Tea"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 11,
+            "name": "Mango Smoothie",
+            "category": "Drinks",
+            "price": 90.0,
+            "stock_qty": 20,
+            "allergens": "dairy",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 20,
+            "available": true,
+            "included": [
+              "Mango Smoothie"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 12,
+            "name": "Bottled Water",
+            "category": "Drinks",
+            "price": 30.0,
+            "stock_qty": 50,
+            "allergens": "none listed",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 50,
+            "available": true,
+            "included": [
+              "Bottled Water"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 14,
+            "name": "Halo-Halo",
+            "category": "Desserts",
+            "price": 120.0,
+            "stock_qty": 10,
+            "allergens": "dairy",
+            "is_combo": false,
+            "dietary_tags": [],
+            "available_qty": 10,
+            "available": true,
+            "included": [
+              "Halo-Halo"
+            ],
+            "savings": 0
+          },
+          {
+            "id": 102,
+            "name": "Chicken Inasal Meal",
+            "category": "Combos",
+            "price": 320.0,
+            "stock_qty": 0,
+            "allergens": "soy",
+            "is_combo": true,
+            "dietary_tags": [],
+            "available_qty": 15,
+            "available": true,
+            "included": [
+              "Chicken Inasal",
+              "French Fries",
+              "Iced Tea"
+            ],
+            "savings": 30.0
+          },
+          {
+            "id": 104,
+            "name": "Grilled Salmon Meal",
+            "category": "Combos",
+            "price": 390.0,
+            "stock_qty": 0,
+            "allergens": "fish",
+            "is_combo": true,
+            "dietary_tags": [],
+            "available_qty": 2,
+            "available": true,
+            "included": [
+              "Grilled Salmon",
+              "French Fries",
+              "Iced Tea"
+            ],
+            "savings": 70.0
+          }
+        ],
+        "message": ""
+      }
+    },
+    {
+      "time": "2026-10-15T23:26:51",
+      "state": "STATE_TAKING_ORDER",
+      "event": "db_state",
+      "order": {
+        "items": [],
+        "subtotal": 0,
+        "service_fee": 0.0,
+        "total": 0.0,
+        "currency": "PHP"
+      }
+    },
+    {
+      "time": "2026-10-15T23:27:22",
+      "state": "STATE_TAKING_ORDER",
+      "event": "user_message",
+      "text": "can i get 10 halo halo"
+    },
+    {
+      "time": "2026-10-15T23:27:24",
+      "state": "STATE_TAKING_ORDER",
+      "event": "tool_call",
+      "tool": "add_item_to_order",
+      "arguments": {
+        "item_name": "halo halo",
+        "qty": 10,
+        "session_id": 1
+      },
+      "result": {
+        "ok": false,
+        "error": "'halo halo' is not on the menu.",
+        "did_you_mean": [
+          "Halo-Halo"
+        ]
+      }
+    },
+    {
+      "time": "2026-10-15T23:27:24",
+      "state": "STATE_TAKING_ORDER",
+      "event": "db_state",
+      "order": {
+        "items": [],
+        "subtotal": 0,
+        "service_fee": 0.0,
+        "total": 0.0,
+        "currency": "PHP"
+      }
+    },
+    {
+      "time": "2026-10-15T23:27:34",
+      "state": "STATE_TAKING_ORDER",
+      "event": "user_message",
+      "text": "can i get 10 halo-halo?"
+    },
+    {
+      "time": "2026-10-15T23:27:34",
+      "state": "STATE_TAKING_ORDER",
+      "event": "tool_call",
+      "tool": "add_item_to_order",
+      "arguments": {
+        "item_name": "Halo-Halo",
+        "qty": 10,
+        "session_id": 1
+      },
+      "result": {
+        "ok": true,
+        "message": "Added 10 x Halo-Halo.",
+        "order": {
+          "items": [
+            {
+              "line_id": 1,
+              "item_id": 14,
+              "name": "Halo-Halo",
+              "category": "Desserts",
+              "quantity": 10,
+              "instructions": "",
+              "unit_price": 120.0,
+              "is_combo": false,
+              "line_total": 1200.0
+            }
+          ],
+          "subtotal": 1200.0,
+          "service_fee": 120.0,
+          "total": 1320.0,
+          "currency": "PHP"
+        },
+        "allergens": "dairy",
+        "combo_recommendations": []
+      }
+    },
+    {
+      "time": "2026-10-15T23:27:34",
+      "state": "STATE_TAKING_ORDER",
+      "event": "db_state",
+      "order": {
+        "items": [
+          {
+            "line_id": 1,
+            "item_id": 14,
+            "name": "Halo-Halo",
+            "category": "Desserts",
+            "quantity": 10,
+            "instructions": "",
+            "unit_price": 120.0,
+            "is_combo": false,
+            "line_total": 1200.0
+          }
+        ],
+        "subtotal": 1200.0,
+        "service_fee": 120.0,
+        "total": 1320.0,
+        "currency": "PHP"
+      }
+    },
+    {
+      "time": "2026-10-15T23:27:34",
+      "state": "STATE_TAKING_ORDER",
+      "event": "tool_call",
+      "tool": "get_combo_recommendations",
+      "arguments": {},
+      "result": {
+        "ok": true,
+        "recommendations": []
+      }
+    },
+    {
+      "time": "2026-10-15T23:27:34",
+      "state": "STATE_TAKING_ORDER",
+      "event": "db_state",
+      "order": {
+        "items": [
+          {
+            "line_id": 1,
+            "item_id": 14,
+            "name": "Halo-Halo",
+            "category": "Desserts",
+            "quantity": 10,
+            "instructions": "",
+            "unit_price": 120.0,
+            "is_combo": false,
+            "line_total": 1200.0
+          }
+        ],
+        "subtotal": 1200.0,
+        "service_fee": 120.0,
+        "total": 1320.0,
+        "currency": "PHP"
+      }
+    },
+    {
+      "time": "2026-10-15T23:27:52",
+      "state": "STATE_TAKING_ORDER",
+      "event": "state_transition",
+      "from_state": "STATE_TAKING_ORDER",
+      "to_state": "STATE_REVIEW",
+      "reason": "customer finished ordering"
+    },
+    {
+      "time": "2026-10-15T23:27:53",
+      "state": "STATE_REVIEW",
+      "event": "confirm_order",
+      "result": {
+        "ok": true,
+        "receipt": {
+          "session_id": 1,
+          "table_no": 1,
+          "items": [
+            {
+              "line_id": 1,
+              "item_id": 14,
+              "name": "Halo-Halo",
+              "category": "Desserts",
+              "quantity": 10,
+              "instructions": "",
+              "unit_price": 120.0,
+              "is_combo": false,
+              "line_total": 1200.0
+            }
+          ],
+          "subtotal": 1200.0,
+          "service_fee": 120.0,
+          "total": 1320.0,
+          "currency": "PHP"
+        }
+      }
+    },
+    {
+      "time": "2026-10-15T23:27:53",
+      "state": "STATE_REVIEW",
+      "event": "state_transition",
+      "from_state": "STATE_REVIEW",
+      "to_state": "STATE_CONFIRMED",
+      "reason": "customer confirmed"
+    },
+    {
+      "time": "2026-10-15T23:27:53",
+      "state": "STATE_CONFIRMED",
+      "event": "db_state",
+      "order": {
+        "session_id": 1,
+        "table_no": 1,
+        "items": [
+          {
+            "line_id": 1,
+            "item_id": 14,
+            "name": "Halo-Halo",
+            "category": "Desserts",
+            "quantity": 10,
+            "instructions": "",
+            "unit_price": 120.0,
+            "is_combo": false,
+            "line_total": 1200.0
+          }
+        ],
+        "subtotal": 1200.0,
+        "service_fee": 120.0,
+        "total": 1320.0,
+        "currency": "PHP"
+      }
+    }
+  ]
+}
